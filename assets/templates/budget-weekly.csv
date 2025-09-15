@@ -1,0 +1,2 @@
+Week Start,Income ($),Rent/Board,Utilities,Phone/Internet,Transport,Groceries,Study,Health,Debt Repay,Subscriptions,Savings Goal,Fun/Other,Total Out ($),Weekly Spend Limit ($),Notes
+2025-01-06,0,0,0,0,0,0,0,0,0,0,0,0,=SUM(C2:N2),=B2-O2,
