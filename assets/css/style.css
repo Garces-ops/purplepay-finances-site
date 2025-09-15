@@ -57,8 +57,11 @@ body{
 .hero .lead{font-size:1.1rem; color:#444; max-width:60ch}
 .cta-row{margin-top:18px; display:flex; gap:12px; flex-wrap:wrap}
 .hero-media{height:220px; background:
-  url('../img/hero.jpg') center/cover no-repeat, 
+  url('../hero.jpg') center/cover no-repeat,
   linear-gradient(90deg, rgba(108,92,231,.2), rgba(108,92,231,0));
+}
+
+
 }
 
 /* Strip */
