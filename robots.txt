@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+SSitemap: https://Garces-ops.github.io/sitemap.xml
