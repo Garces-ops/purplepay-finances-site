@@ -89,3 +89,4 @@ body{
   .nav-toggle{display:inline-flex; align-items:center; padding:8px 12px; border-radius:10px; border:1px solid #ddd; background:#fff}
   .site-nav.open{display:flex}
 }
+.logo{display:inline-block;height:40px;width:auto;margin-right:8px;vertical-align:middle}
