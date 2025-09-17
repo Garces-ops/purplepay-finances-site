@@ -29,6 +29,15 @@ body{
 .site-nav a[aria-current="page"]{color:var(--pp-purple)}
 .nav-toggle{display:none}
 
+/* Logo image styling */
+.logo{
+  display:inline-block;
+  height:40px;
+  width:auto;
+  margin-right:8px;
+  vertical-align:middle;
+}
+
 /* Buttons */
 .btn{display:inline-block; padding:12px 18px; border-radius:999px; border:1px solid #ddd; text-decoration:none; font-weight:700}
 .btn-primary{background:var(--pp-purple); color:#fff; border-color:var(--pp-purple)}
@@ -46,9 +55,23 @@ body{
 .checklist li{margin:6px 0}
 
 /* Hero */
-.hero{position:relative; overflow:hidden; background:
-  radial-gradient(1200px 600px at 110% -10%, rgba(108,92,231,.25), transparent 60%),
-  linear-gradient(180deg, #fff, #f2f2ff 70%);
+/*
+ * Home page hero styling
+ *
+ * Replace the default gradient-only hero background with a subtle, high‑contrast
+ * photographic texture. We layer a semi‑transparent purple gradient over
+ * the image to preserve the PurplePay colour palette, and keep the
+ * professional look and feel. The final gradient layer subtly darkens
+ * the bottom of the hero to help the text stand out.
+ */
+.hero{
+  position:relative;
+  overflow:hidden;
+  /* Layer a purple gradient over the dark photo so the text remains legible
+     and the brand colours shine through */
+  background:
+    linear-gradient(180deg, rgba(108,92,231,0.4), rgba(108,92,231,0.2)),
+    url('../img/home-background.png') center/cover no-repeat;
   border-bottom:1px solid #ececfa;
 }
 .hero-inner{padding:90px 20px 64px; max-width:900px; margin:0 auto}
@@ -56,12 +79,15 @@ body{
 .hero .accent{color:var(--pp-purple)}
 .hero .lead{font-size:1.1rem; color:#444; max-width:60ch}
 .cta-row{margin-top:18px; display:flex; gap:12px; flex-wrap:wrap}
-.hero-media{height:220px; background:
-  url('../hero.jpg') center/cover no-repeat,
-  linear-gradient(90deg, rgba(108,92,231,.2), rgba(108,92,231,0));
-}
-
-
+/*
+ * Simplified hero media: remove the separate photo layer from the hero media
+ * block and retain only a subtle horizontal purple gradient. The actual
+ * photographic backdrop is now defined on the .hero container above.
+ */
+.hero-media{
+  height:220px;
+  background:
+    linear-gradient(90deg, rgba(108,92,231,.2), rgba(108,92,231,0));
 }
 
 /* Strip */
@@ -89,4 +115,3 @@ body{
   .nav-toggle{display:inline-flex; align-items:center; padding:8px 12px; border-radius:10px; border:1px solid #ddd; background:#fff}
   .site-nav.open{display:flex}
 }
-.logo{display:inline-block;height:40px;width:auto;margin-right:8px;vertical-align:middle}
