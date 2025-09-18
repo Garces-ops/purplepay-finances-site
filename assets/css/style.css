@@ -76,8 +76,23 @@ body{
 }
 .hero-inner{padding:90px 20px 64px; max-width:900px; margin:0 auto}
 .hero h1{font-family:"Playfair Display",serif; font-size: clamp(32px, 5vw, 56px); line-height:1.05; margin:0 0 10px}
-.hero .accent{color:var(--pp-purple)}
-.hero .lead{font-size:1.1rem; color:#444; max-width:60ch}
+/*
+ * Adjust hero headline and tagline colours for better contrast against the
+ * dark photographic background. The main headline is white, while the
+ * accent span retains the PurplePay purple hue. The lead paragraph
+ * underneath is also white to improve legibility.
+ */
+.hero h1{
+  color:#fff;
+}
+.hero .accent{
+  color:var(--pp-purple);
+}
+.hero .lead{
+  font-size:1.1rem;
+  color:#fff;
+  max-width:60ch;
+}
 .cta-row{margin-top:18px; display:flex; gap:12px; flex-wrap:wrap}
 /*
  * Simplified hero media: remove the separate photo layer from the hero media
@@ -85,9 +100,10 @@ body{
  * photographic backdrop is now defined on the .hero container above.
  */
 .hero-media{
-  height:220px;
-  background:
-    linear-gradient(90deg, rgba(108,92,231,.2), rgba(108,92,231,0));
+  /* Hide the hero media block entirely to remove the purple box that used to
+   * sit beneath the hero text. The photographic backdrop is now handled
+   * by the `.hero` background, so this element is no longer needed. */
+  display:none;
 }
 
 /* Strip */
