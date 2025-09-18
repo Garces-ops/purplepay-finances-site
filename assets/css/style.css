@@ -67,10 +67,9 @@ body{
 .hero{
   position:relative;
   overflow:hidden;
-  /* Layer a purple gradient over the dark photo so the text remains legible
-     and the brand colours shine through */
+  /* Use the original dark photo without any gradient overlay to keep its natural colours.
+     A plain background behind the hero text ensures legibility while letting the image shine. */
   background:
-    linear-gradient(180deg, rgba(108,92,231,0.4), rgba(108,92,231,0.2)),
     url('../img/home-background.png') center/cover no-repeat;
   border-bottom:1px solid #ececfa;
 }
